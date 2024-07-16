@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure | cloth | size </title>
+    <link rel="stylesheet" href="{% static 'clothScale/index.css' %}">
+</head>
+<body>
+    <div>
+
+        {% if predicted_size %}
+        <h1>The predicte size is: {{ predicted_size }}</h1>
+        {% endif %}
+    </div>
+    <form method="POST" action="">
+
+        {% csrf_token %}
+
+        <img src="" alt="">
+        <input type="number" placeholder="Enter weight: " name="weight">
+        <input type="number" placeholder="Enter height: " name="height">
+        <input type="number" placeholder="Enter Age: " name="Age">
+        <input type="submit" value="size">
+    </form>
+
+    
+</body>
+</html>
